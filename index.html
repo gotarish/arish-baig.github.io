@@ -1,56 +1,35 @@
-<!DOCTYPE html>
+<html>
     <head>
-        <title>Simple Interest Calculator</title>
-        <script src="script.js"></script>
-        <link rel="stylesheet" href="style.css">
+        <title>Web App – Simple Interest Calculator</title>       <!--add a descriptive title-->
+        <script src="script.js"></script>               <!--Link the javascript document-->
+        <link rel="stylesheet" href="style.css">        <!--Link the css file-->
     </head>
-    <body>
-        <div class="maindiv">
-            <h1>Simple Interest Calculator</h1>
-
-            <div class="contents">
-                <table id="table">
-                    <tbody>
-                        <tr>
-                            <td class="labels">Amount </td>
-                            <td>
-                                <input type="number" id="principal">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="labels">Interest Rate </td>
-                            <td>
-                                <input type="range" min="1" max="20" step="0.25" value="10.25" id="rate" name="rate" onchange="SliderValue()"> 
-                                <span id="rate_display">10.25%</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="labels">No. of Years</td>
-                            <td>
-                                <select name="years" id="years">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+    <body><br>
+        <center>
+        <div class="maindiv" align="left">              
+            <center><h1>Simple Interest Calculator</h1></center> <br>           <!--Add a heading-->
+               Amount <input type="number" id="principal">  <br><br>         <!--Input the principal-->
+               Rate <input type="range" id="rate" min="1" max="20" onchange="updateRate()">   <!--Choose the rate-->
+            <span id="rate_val">6</span>
+            <br><br>
+               Number of Years <select id="years">     <!--Dropdown for number of years-->
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select><br><br>
+               <button onclick="compute()">Compute Interest</button><br><br>       <!--Button to compute interest-->
+            <span id="result">   If you deposit <mark>23</mark><br>   at an interest rate of <mark>6%.</mark><br>   You will receive an amount of <mark>6.9<br></mark>   in the year <mark>2026</mark></span><br><br>                             <!--Display the interest-->
+             <footer>
+        © This Calculator belongs to Arish Baig              <!--Copyright-->
+        </footer>
+        </div><br><br><br><br><br></center>
     
-    
-                <button id="compute" onclick="compute()">Calculate Interest</button> <br>
-                <span id="result">
-                </span>
-            </div>
 
-            
-        </div>
-    </body>
-</html>
+</body></html>
